@@ -1,6 +1,7 @@
 // Dependencies 
 const express = require('express');
 
+const apiRoute = require('./routes/apiRoutes');
 //Create an instance of express 
 const app = express();
 
@@ -14,6 +15,9 @@ app.use(express.json());
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+//API ROUTES
+app.use(apiRoutes);
 
 
 
