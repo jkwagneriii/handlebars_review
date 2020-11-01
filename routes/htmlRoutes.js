@@ -5,10 +5,11 @@ const router = require('express').Router();
 router.route('/')
     .get(function(req, res) {
         db.Burger.findAll({}).then(function(burgerData){
-        res.render('index', { burgers: burgerData });
+        res.render('index', { poopoo: burgerData });
     })
 }); 
 
+module.exports = router;
 
 
 

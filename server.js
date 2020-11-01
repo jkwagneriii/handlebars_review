@@ -2,7 +2,9 @@
 const express = require('express');
 const db = require('./models');
 
-const apiRoute = require('./routes/apiRoutes');
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
+
 //Create an instance of express 
 const app = express();
 
