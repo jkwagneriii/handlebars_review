@@ -1,22 +1,15 @@
 //Dependencies
 const router = require('express').Router();
+const burgersController = require('../controllers/burgersController');
 
 //CRUD 
 router.route('/api/burgers/:id?')
-    .get(function(req, res) {
-        if(req.params.id){
-            //get burger by id
-        }
-        //get all the available burgers
-    })
-    .post(function(req, res) {
+    .get(req.params.id ? burgersController.smashSpecificBurg : burgersController.smashAllBurgs) 
+    .post(burgersController.addBurg)
         //add a burger to database
-    })
-    .update(function(req, res) {
+    .update(burgersController.updateBurg)
         //update a specific burger
-    })
-    .delete(function(req, res) {
+    .delete(burgersController.deleteBurg) 
         //delete a specific burger 
-    });
 
 module.exports = router;
