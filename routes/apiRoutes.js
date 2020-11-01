@@ -9,7 +9,7 @@ router.route('/api/burgers/:id?')
         //add a burger to database
     .update(burgersController.updateBurg)
         //update a specific burger
-    .delete(burgersController.deleteBurg) 
+    .delete(burgersController.deleteBurg); 
         //delete a specific burger 
 
 module.exports = router;
